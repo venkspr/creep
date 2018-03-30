@@ -19,7 +19,7 @@ const Table = props => {
                 name={"fname"}
                 value={props.data[i].fname}
                 onChange={e => {
-                  props.handleTableChange(item._id, i, e);
+                  props.handleTableChange(item.id, i, e);
                 }}
               />
             </td>
@@ -40,7 +40,7 @@ const Table = props => {
               />
             </td>
             <td>
-              <Button {...props} _id={props.data[i]._id} />
+              <Button {...props} id={props.data[i].id} />
             </td>
           </tr>
         ))}

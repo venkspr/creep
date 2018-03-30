@@ -13,10 +13,13 @@ class Employees extends Component {
   componentDidMount() {
     let self = this;
     const state = this.state;
-    axios.get("http://localhost:8888/api/deals").then(function(response) {
-      state["data"] = [...response.data];
-      self.setState(state);
-    });
+    axios
+      .get("http://vrangara2:8080/angular/qualcomm/api/names/")
+      .then(function(response) {
+        // console.log(response);
+        state["data"] = [...response.data.items];
+        self.setState(state);
+      });
   }
 
   render() {
