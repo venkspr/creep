@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 
 const Employee = ({ match }) => (
   <div>
-    <h3>ID: {match.params.id}</h3>
+    <h3>Employee Id ID: {match.params.id}</h3>
   </div>
 );
 
